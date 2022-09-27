@@ -1,0 +1,15 @@
+<%- include('../partials/header'); -%>
+
+<header>
+  <div class="smoothie">
+    <img src="/logo.png" alt="">
+  </div>
+  <div class="headings">
+    <p><%= review.review %> </p>
+    <form class="form-background" action="/reviews/<%= review.id %>?_method=DELETE" method="POST">
+      <button type="submit" class="delete">Delete</button>
+    </form>
+  </div>
+</header>
+
+<%- include('../partials/footer'); -%> 

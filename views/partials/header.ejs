@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay-Cafe | <%= title %> </title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+  <nav>
+    <div>
+      <h1>
+        <a href="/">Jay Cafe</a>
+      </h1>
+      <p>Coffee & Eatery</p>
+    </div>    
+    <ul>
+      <% if(user){ %>
+        <li><a href="/about">About</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li class="welcome">Welcome, <span><%= user.username %> </span></li>
+        <li><a class="btn" href="/logout">Logout</a></li>
+      <%}else{ %>
+        <li><a href="/about">About</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li><a class="btn" href="/login">Login</a></li>
+        <li><a class="btn" href="/signup">Sign up</a></li>
+      <%} %> 
+    </ul>
+  </nav>
+  

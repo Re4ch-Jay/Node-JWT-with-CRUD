@@ -1,0 +1,22 @@
+<%- include('../partials/header'); -%>
+<div class="margin">
+  <a href="/reviews" class="btn">Reviews</a>
+</div>  
+<header>
+  <div class="smoothie">
+    <img src="/logo.png" alt="">
+  </div>
+  <div class="headings">
+    <form action="/reviews" method="POST">
+        <h3>Review Section</h3>
+        <label for="snippet">Review Snippet</label>
+        <input type="text" name="snippet" id="snippet" required>
+        <label for="review">Review content</label>
+        <textarea name="review" id="review" cols="30" rows="10" required></textarea>
+        
+        <button>Submit</button>
+    </form>
+  </div>
+</header>
+
+<%- include('../partials/footer'); -%>

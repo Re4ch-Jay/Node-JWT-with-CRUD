@@ -1,0 +1,22 @@
+<%- include('../partials/header'); -%>
+<div>
+    <a class="btn" href="/coffee">Coffee List</a>
+  </div>
+<header>
+  <div class="smoothie">
+    <img src="/logo.png" alt="">
+  </div>
+  <div class="headings">
+    <form action="/coffee" method="POST">
+        <h3>Order Recipes</h3>
+        <label for="recipe">Recipe</label>
+        <input type="text" name="recipe" id="recipe" required>
+        <label for="incredient">Incredient</label>
+        <textarea name="incredient" id="incredient" cols="30" rows="10" required></textarea>
+        
+        <button>Submit</button>
+    </form>
+  </div>
+</header>
+
+<%- include('../partials/footer'); -%>

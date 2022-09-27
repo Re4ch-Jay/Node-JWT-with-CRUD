@@ -1,0 +1,22 @@
+<%- include('../partials/header'); -%>
+<div>
+  <a class="btn" href="/coffee/create">Add Coffee</a>
+  <a class="btn" href="/coffee">Coffee List</a>
+</div>
+<header>
+  <div class="smoothie">
+    <img src="/logo.png" alt="">
+  </div>
+  <div class="headings">
+    <div class="card-recipe">
+      <h3><%= coffee.recipe %> </h3>
+      <h4><%= coffee.incredient %> </h4>
+      <p><%= coffee.createdAt.toLocaleString() %> </p>
+    </div>
+    <form class="form-background" action="/coffee/<%= coffee.id %>?_method=DELETE" method="POST">
+      <button type="submit" class="delete">Delete</button>
+    </form>
+  </div>
+</header>
+
+<%- include('../partials/footer'); -%> 

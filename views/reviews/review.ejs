@@ -1,0 +1,23 @@
+<%- include('../partials/header'); -%>
+<div>
+  <a href="/reviews/create" class="btn">Post</a>
+</div>
+<header>
+  <ul class="recipes">
+    <% if(reviews.length > 0 ){ %>
+      <% reviews.forEach(review => { %>
+       <li class="recipe">
+         <h3 class="padding"><%= review.snippet %> </h3>
+         <p><%= review.review.slice(0, 100)%>... </p>
+         <a href="/reviews/<%= review.id %>"><h5 class="btn">Show More</h5></a>
+       </li>
+      <%})%> 
+  </ul>
+  <% }else{ %>
+      <h3>There is no reviews right now! Be the first to reviews!</h3>
+  <% } %> 
+  
+</header>
+
+
+<%- include('../partials/footer'); -%>

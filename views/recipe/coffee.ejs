@@ -1,0 +1,20 @@
+<%- include('../partials/header'); -%>
+<div>
+  <a class="btn" href="/coffee/create">Add Coffee</a>
+</div>
+<ul class="recipes">
+  <% if(coffees.length > 0 ){ %>
+    <% coffees.forEach(coffee => { %>
+     <li class="recipe">
+       <img src="/logo.png" alt="logo recipe icon">
+       <h4><%= coffee.recipe %> </h4>
+       <p><%= coffee.incredient %> </p>
+       <a href="/coffee/<%= coffee.id %>"><h5 class="btn">Details</h5></a>
+     </li>
+    <%})%> 
+</ul>
+<% }else{ %>
+    <h3>There is no order right now! Be the first to order!</h3>
+<% } %> 
+
+<%- include('../partials/footer'); -%>
