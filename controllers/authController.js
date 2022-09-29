@@ -1,7 +1,10 @@
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 const handleError = require('./errorController')
-require('dotenv').config()
+if (process.env.NODE_ENV !== 'production'){
+    require('dotenv').config()
+}
+
 
 // createToken
 const maxAge = 3 * 24 * 60 * 60
