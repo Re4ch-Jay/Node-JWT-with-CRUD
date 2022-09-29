@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 // routes
 app.get('*', checkUser)
-app.get('/', (req, res) => res.render('home', {title: 'Home'}));
+app.get('/', (req, res) => res.render('index', {title: 'Home'}));
 app.use(require('./routes/recipeRoutes'))
 app.use(require('./routes/reviewRoutes'))
 app.use(authRoutes)
